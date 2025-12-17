@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Video Tech Course - Smartphone Video Creation Guide</title>
-    
+
     <meta name="description"
         content="A practical guide to creating professional AI videos using your smartphone. Learn the workflows for business, social media, and storytelling content.">
 
@@ -39,7 +39,7 @@
         }
 
         /* --- LAYOUT UTILITIES --- */
-        .container {
+        .site-shell {
             max-width: 700px;
             margin: 0 auto;
             padding: 20px;
@@ -114,7 +114,7 @@
         }
 
         /* --- SPECIAL BOXES --- */
-        .highlight-box {
+        .featured-item {
             background-color: #fff8e1;
             border-left: 5px solid #ffc107;
             padding: 20px;
@@ -122,7 +122,7 @@
             border-radius: 4px;
         }
 
-        .dark-box {
+        .contrast-section {
             background-color: #2d3436;
             color: white;
             padding: 25px;
@@ -131,17 +131,17 @@
             border-radius: 0;
         }
 
-        .dark-box h2 {
+        .contrast-section h2 {
             border-bottom-color: white;
             color: white;
         }
 
-        .dark-box p,
-        .dark-box li {
+        .contrast-section p,
+        .contrast-section li {
             color: #ddd;
         }
 
-        .bonus-box {
+        .extra-content {
             background-color: #e8f5e9;
             border: 2px dashed var(--primary);
             padding: 20px;
@@ -149,7 +149,7 @@
             border-radius: 8px;
         }
 
-        .price-box {
+        .checkout-area {
             text-align: center;
             background: var(--light-gray);
             padding: 30px;
@@ -159,7 +159,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .new-price {
+        .current-offer {
             color: var(--primary);
             font-size: 48px;
             font-weight: 900;
@@ -169,7 +169,7 @@
         }
 
         /* --- BUTTONS --- */
-        .cta-btn {
+        .action-trigger {
             background-color: var(--accent);
             color: white;
             padding: 20px 25px;
@@ -189,17 +189,17 @@
             line-height: 1.2;
         }
 
-        .cta-btn:active {
+        .action-trigger:active {
             transform: translateY(4px);
             box-shadow: none;
         }
 
-        .cta-pulse {
+        .heartbeat-anim {
             animation: pulse 2s infinite;
         }
 
         /* --- TESTIMONIAL SLIDER --- */
-        .testimonial-container {
+        .feedback-slider {
             position: relative;
             background: var(--light-gray);
             padding: 20px 0;
@@ -208,7 +208,7 @@
             overflow: hidden;
         }
 
-        .slider-track {
+        .carousel-rail {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
@@ -221,11 +221,11 @@
             /* Smooth scroll on iOS */
         }
 
-        .slider-track::-webkit-scrollbar {
+        .carousel-rail::-webkit-scrollbar {
             display: none;
         }
 
-        .slide {
+        .carousel-item {
             flex: 0 0 85%;
             /* Shows a peek of the next slide */
             scroll-snap-align: center;
@@ -238,7 +238,7 @@
             align-items: center;
         }
 
-        .slide img {
+        .carousel-item img {
             width: 100%;
             height: auto;
             display: block;
@@ -246,7 +246,7 @@
         }
 
         /* Navigation Arrows */
-        .slider-btn {
+        .nav-arrow {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -266,17 +266,17 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        .prev-btn {
+        .arrow-left {
             left: 10px;
         }
 
-        .next-btn {
+        .arrow-right {
             right: 10px;
         }
 
         /* Desktop Adjustment */
         @media (min-width: 600px) {
-            .slide {
+            .carousel-item {
                 flex: 0 0 60%;
             }
 
@@ -285,13 +285,13 @@
 
 
         /* --- FAQ --- */
-        .faq-item {
+        .qa-block {
             margin-bottom: 20px;
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
         }
 
-        .faq-q {
+        .qa-query {
             font-weight: bold;
             color: var(--primary-dark);
             font-size: 19px;
@@ -299,11 +299,11 @@
         }
 
         /* --- VIDEO GRID --- */
-        .video-section {
+        .media-zone {
             margin: 30px 0;
         }
 
-        .video-section-header {
+        .media-zone-top {
             text-align: center;
             background: #2d3436;
             color: white;
@@ -311,7 +311,7 @@
             border-radius: 8px 8px 0 0;
         }
 
-        .video-grid {
+        .clip-layout {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
@@ -320,7 +320,7 @@
             border-radius: 0 0 8px 8px;
         }
 
-        .video-card {
+        .clip-preview {
             background: white;
             border-radius: 4px;
             overflow: hidden;
@@ -334,7 +334,7 @@
             border: 1px solid #ddd;
         }
 
-        .play-icon {
+        .start-btn {
             z-index: 2;
             width: 40px;
             height: 40px;
@@ -347,7 +347,7 @@
             font-size: 20px;
         }
 
-        .video-label {
+        .clip-caption {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -362,14 +362,14 @@
         }
 
         /* --- CHECKLIST GRID --- */
-        .checklist-grid {
+        .list-layout {
             display: grid;
             grid-template-columns: 1fr;
             gap: 10px;
             margin: 20px 0;
         }
 
-        .checklist-item {
+        .value-point {
             background: #f0fdf4;
             border: 1px solid #bbf7d0;
             padding: 15px;
@@ -392,7 +392,7 @@
         }
 
         /* --- STICKY FOOTER --- */
-        .sticky-footer {
+        .fixed-bottom-bar {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -405,19 +405,19 @@
         }
 
         @media (max-width: 600px) {
-            .sticky-footer {
+            .fixed-bottom-bar {
                 display: block;
             }
 
-            .dark-box {
+            .contrast-section {
                 margin: 30px -20px;
                 padding: 25px 20px;
             }
         }
 
         /* --- MODALS --- */
-        .video-modal,
-        .checkout-modal {
+        .media-overlay,
+        .purchase-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -428,14 +428,14 @@
             display: none;
         }
 
-        .video-modal {
+        .media-overlay {
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
 
         /* Video Modal Specifics */
-        .video-container {
+        .player-wrapper {
             width: 100%;
             max-width: 500px;
             position: relative;
@@ -448,7 +448,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .video-close {
+        .dismiss-overlay {
             position: absolute;
             top: -40px;
             right: 0;
@@ -460,7 +460,7 @@
         }
 
         /* Checkout Modal Specifics */
-        .checkout-content {
+        .purchase-panel {
             position: absolute;
             top: 0;
             left: 0;
@@ -475,7 +475,7 @@
             flex-direction: column;
         }
 
-        .checkout-header {
+        .panel-top {
             padding: 15px;
             border-bottom: 1px solid #eee;
             display: flex;
@@ -484,14 +484,14 @@
             background: #fafafa;
         }
 
-        .checkout-body {
+        .panel-main {
             padding: 20px;
             overflow-y: auto;
             flex: 1;
         }
 
         /* Form Styles */
-        .form-input {
+        .data-field {
             width: 100%;
             padding: 15px;
             margin-bottom: 15px;
@@ -500,7 +500,7 @@
             font-size: 16px;
         }
 
-        .summary-box {
+        .recap-block {
             background: #f1f8e9;
             padding: 15px;
             border-radius: 6px;
@@ -508,7 +508,7 @@
             font-size: 14px;
         }
 
-        .total-row {
+        .final-sum {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
@@ -536,7 +536,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="site-shell">
         <header style="text-align: center; padding-bottom: 10px;">
             <p style="font-size: 13px; color: #666; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
                 Attention: Content Creators & Business Owners</p>
@@ -551,152 +551,173 @@
                 <li>✅ Share ideas, lessons, or stories effectively</li>
                 <li>✅ Use modern tools to save time and effort</li>
             </ul>
-            <p>The challenge is that you want to get started, but <strong>the whole AI video process feels confusing to learn on your own.</strong></p>
-            <p>That’s exactly why the <strong>AI Video Tech Course</strong> was created to show you the process in a clear, simple, and practical way.</p>
+            <p>The challenge is that you want to get started, but <strong>the whole AI video process feels confusing to
+                    learn on your own.</strong></p>
+            <p>That’s exactly why the <strong>AI Video Tech Course</strong> was created to show you the process in a
+                clear, simple, and practical way.</p>
         </section>
 
-        <section class="video-section">
-            <div class="video-section-header">
+        <section class="media-zone">
+            <div class="media-zone-top">
                 <h3 style="color: white; margin: 0; font-size: 20px;">See What You Can Achieve</h3>
                 <p style="color: #ccc; font-size: 15px; margin: 10px 0 0; line-height: 1.4;">
                     Take a look at the quality of work you can produce.<br>
                     <span style="font-size: 13px; opacity: 0.9;"></span>
                 </p>
             </div>
-            <div class="video-grid">
-                <div class="video-card" onclick="playVideo('video1.mp4', 'Business Ad')">
+            <div class="clip-layout">
+                <div class="clip-preview" onclick="playVideo('video1.mp4', 'Business Ad')">
                     <div
                         style="background: linear-gradient(45deg, #eee, #ddd); position: absolute; top:0; left:0; width:100%; height:100%;">
                     </div>
-                    <div class="play-icon">▶</div>
-                    <div class="video-label">Video 1</div>
+                    <div class="start-btn">▶</div>
+                    <div class="clip-caption">Video 1</div>
                 </div>
-                <div class="video-card" onclick="playVideo('video2.mp4', 'Digital Avatar')">
+                <div class="clip-preview" onclick="playVideo('video2.mp4', 'Digital Avatar')">
                     <div
                         style="background: linear-gradient(45deg, #ddd, #ccc); position: absolute; top:0; left:0; width:100%; height:100%;">
                     </div>
-                    <div class="play-icon">▶</div>
-                    <div class="video-label">Video 2</div>
+                    <div class="start-btn">▶</div>
+                    <div class="clip-caption">Video 2</div>
                 </div>
-                <div class="video-card" onclick="playVideo('video3.mp4', 'Faceless Content')">
+                <div class="clip-preview" onclick="playVideo('video3.mp4', 'Faceless Content')">
                     <div
                         style="background: linear-gradient(45deg, #ccc, #bbb); position: absolute; top:0; left:0; width:100%; height:100%;">
                     </div>
-                    <div class="play-icon">▶</div>
-                    <div class="video-label">Video 3</div>
+                    <div class="start-btn">▶</div>
+                    <div class="clip-caption">Video 3</div>
                 </div>
-                <div class="video-card" onclick="playVideo('video4.mp4', 'Storytelling')">
+                <div class="clip-preview" onclick="playVideo('video4.mp4', 'Storytelling')">
                     <div
                         style="background: linear-gradient(45deg, #bbb, #aaa); position: absolute; top:0; left:0; width:100%; height:100%;">
                     </div>
-                    <div class="play-icon">▶</div>
-                    <div class="video-label">Video 4</div>
+                    <div class="start-btn">▶</div>
+                    <div class="clip-caption">Video 4</div>
                 </div>
             </div>
-            <p style="text-align: center; font-size: 13px; color: #666; margin-top: 10px;">*These are samples. Learn how to apply these skills to bring your creative video concepts to life.</p>
+            <p style="text-align: center; font-size: 13px; color: #666; margin-top: 10px;">*These are samples. Learn how
+                to apply these skills to bring your creative video concepts to life.</p>
         </section>
 
-        <button class="cta-btn cta-pulse trigger-checkout">Get Instant Access — Only N3,500</button>
+        <button class="action-trigger heartbeat-anim trigger-checkout">Get Instant Access — Only N3,500</button>
 
 
         <section>
             <h2>What You Will Learn In This Course</h2>
-            <p>This is a practical training program. We focus on the specific workflows needed to produce high-quality AI videos step-by-step.
+            <p>This is a practical training program. We focus on the specific workflows needed to produce high-quality
+                AI videos step-by-step.
             </p>
 
-            <div class="highlight-box">
+            <div class="featured-item">
                 <h4>🎬 Business & Marketing Clips</h4>
-                <p>Learn to produce product demos, service explainers, and engaging social media clips that help communicate your message clearly to potential customers.</p>
+                <p>Learn to produce product demos, service explainers, and engaging social media clips that help
+                    communicate your message clearly to potential customers.</p>
             </div>
 
-            <div class="highlight-box">
+            <div class="featured-item">
                 <h4>🤖 Create Your Own Digital Avatar</h4>
-                <p>Create a digital twin of yourself. Build an AI-powered version of your likeness so you can scale video creation and show up in countless videos without repeatedly recording the same content.</p>
+                <p>Create a digital twin of yourself. Build an AI-powered version of your likeness so you can scale
+                    video creation and show up in countless videos without repeatedly recording the same content.</p>
             </div>
 
-            <div class="highlight-box">
+            <div class="featured-item">
                 <h4>🎥 Engaging Social Media Content</h4>
-                <p>Discover how to format and create videos specifically for platforms like Instagram, TikTok, and Facebook to capture attention as viewers scroll.</p>
+                <p>Discover how to format and create videos specifically for platforms like Instagram, TikTok, and
+                    Facebook to capture attention as viewers scroll.</p>
             </div>
 
-            <div class="highlight-box">
+            <div class="featured-item">
                 <h4>🎭 Visual Storytelling</h4>
-                <p>Turn your written ideas into visual stories. We guide you through the process of using AI characters and scenes to match your narrative.</p>
+                <p>Turn your written ideas into visual stories. We guide you through the process of using AI characters
+                    and scenes to match your narrative.</p>
             </div>
 
-            <div class="highlight-box">
+            <div class="featured-item">
                 <h4>🎯 Character Consistency</h4>
-                <p><strong>A Vital Skill.</strong> We teach you techniques to maintain the same character look across different scenes, which is essential for amazing storytelling.</p>
+                <p><strong>A Vital Skill.</strong> We teach you techniques to maintain the same character look across
+                    different scenes, which is essential for amazing storytelling.</p>
             </div>
 
-            <div class="highlight-box">
+            <div class="featured-item">
                 <h4>🗣️ Voice & Lip Sync Techniques</h4>
-                <p>Ensure your characters speak naturally. You will learn how to sync audio effectively so the final video looks polished and quality</p>
+                <p>Ensure your characters speak naturally. You will learn how to sync audio effectively so the final
+                    video looks polished and quality</p>
             </div>
         </section>
 
         <section>
             <h2>Skills You Can Apply Immediately</h2>
-            <div class="checklist-grid">
-                <div class="checklist-item">✅ E-commerce product videos</div>
-                <div class="checklist-item">✅ Explainer videos for services</div>
-                <div class="checklist-item">✅ Educational tutorials</div>
-                <div class="checklist-item">✅ Customer testimonial styles (UGC)</div>
-                <div class="checklist-item">✅ Social media reels/shorts</div>
-                <div class="checklist-item">✅ Faceless channel content</div>
-                <div class="checklist-item">✅ Sales presentations</div>
+            <div class="list-layout">
+                <div class="value-point">✅ E-commerce product videos</div>
+                <div class="value-point">✅ Explainer videos for services</div>
+                <div class="value-point">✅ Educational tutorials</div>
+                <div class="value-point">✅ Customer testimonial styles (UGC)</div>
+                <div class="value-point">✅ Social media reels/shorts</div>
+                <div class="value-point">✅ Faceless channel content</div>
+                <div class="value-point">✅ Sales presentations</div>
             </div>
-            <p>Once you master these workflows, you can adapt them to create various types of content depending on your goals.</p>
+            <p>Once you master these workflows, you can adapt them to create various types of content depending on your
+                goals.</p>
         </section>
 
         <section style="text-align: center; padding: 20px; background: #f0f4c3; border-radius: 8px; margin: 30px 0;">
             <h3>🚫 No Specialized Studio Gear Required</h3>
-            <p>One of the biggest advantages of this method is accessibility. You can perform all these tasks using standard devices.</p>
+            <p>One of the biggest advantages of this method is accessibility. You can perform all these tasks using
+                standard devices.</p>
             <p style="font-weight: bold; font-size: 19px;">
                 iPhone? Works perfectly.<br>
                 Android? You’re good to go.<br>
                 Laptop? That works too!
             </p>
-            <p>You do not need to invest in expensive cameras or lighting setups to start learning. Your smartphone and the AI tools we teach are sufficient.</p>
+            <p>You do not need to invest in expensive cameras or lighting setups to start learning. Your smartphone and
+                the AI tools we teach are sufficient.</p>
         </section>
 
         <section>
             <h2>Who Is This Course For?</h2>
             <ul>
-                <li><span>💼</span> <strong>Business Owners</strong> looking for cost-effective ways to create marketing materials.</li>
-                <li><span>📱</span> <strong>Content Creators</strong> who want to produce more content efficiently using new tools.</li>
-                <li><span>🎓</span> <strong>Educators</strong> who need to create video lessons or instructional materials.</li>
+                <li><span>💼</span> <strong>Business Owners</strong> looking for cost-effective ways to create marketing
+                    materials.</li>
+                <li><span>📱</span> <strong>Content Creators</strong> who want to produce more content efficiently using
+                    new tools.</li>
+                <li><span>🎓</span> <strong>Educators</strong> who need to create video lessons or instructional
+                    materials.</li>
                 <li><span>📢</span> <strong>Marketers</strong> seeking fresh, engaging formats for ad campaigns.</li>
-                <li><span>🛍️</span> <strong>E-commerce</strong> who want to showcase products without arranging a physical shoot.</li>
+                <li><span>🛍️</span> <strong>E-commerce</strong> who want to showcase products without arranging a
+                    physical shoot.</li>
             </ul>
         </section>
 
-        <section class="dark-box">
-            <h2 style="margin-top: 0;">Why Choose Thish2>
+        <section class="contrast-section">
+            <h2 style="margin-top: 0;">Why Choose This</h2>
 
             <div style="margin-bottom: 20px;">
                 <h4>1. Practical Application</h4>
-                <p>We focus on "how-to" steps. You follow along and create. The goal is for you to have a finished video by the end of the lessons.</p>
+                <p>We focus on "how-to" steps. You follow along and create. The goal is for you to have a finished video
+                    by the end of the lessons.</p>
             </div>
 
             <div style="margin-bottom: 20px;">
                 <h4>2. Made For Everyone</h4>
-                <p>I understand our unique challenges, including high data costs and slower internet speeds, and this course is designed with those realities in mind.</p>
+                <p>I understand our unique challenges, including high data costs and slower internet speeds, and this
+                    course is designed with those realities in mind.</p>
             </div>
 
             <div style="margin-bottom: 20px;">
                 <h4>3. Beginner Friendly</h4>
-                <p>No prior video editing experience is required. The course is structured to guide you from the basics to more advanced techniques.</p>
+                <p>No prior video editing experience is required. The course is structured to guide you from the basics
+                    to more advanced techniques.</p>
             </div>
 
             <div>
                 <h4>4. One-Time Purchase</h4>
-                <p>Pay once for the education. There are no recurring subscription fees to access the course materials.</p>
+                <p>Pay once for the education. There are no recurring subscription fees to access the course materials.
+                </p>
             </div>
         </section>
 
         <section>
-            <div class="bonus-box">
+            <div class="extra-content">
                 <h2 style="margin-top: 0; color: var(--accent); border: none;">🎁 Course Bonuses</h2>
                 <p><strong>(Included When You Join)</strong></p>
 
@@ -717,13 +738,13 @@
             </div>
         </section>
 
-        <section class="price-box">
+        <section class="checkout-area">
             <p><strong>Course + All 4 Bonuses:</strong></p>
-            <span class="new-price">₦3,500</span>
+            <span class="current-offer">₦3,500</span>
             <p style="font-size: 14px; color: var(--primary); font-weight: bold;">(Special Launch Offer)</p>
             <p><i>One-time payment. Lifetime access.</i></p>
 
-            <button class="cta-btn cta-pulse trigger-checkout">Start Learning Now</button>
+            <button class="action-trigger heartbeat-anim trigger-checkout">Start Learning Now</button>
 
             <p style="font-size: 14px; margin-top: 10px; color: #666;">🔒 Secure Payment via Paystack</p>
         </section>
@@ -734,107 +755,123 @@
                 See what early students are saying about the training.
             </p>
             <p style="text-align: center; font-size: 12px; color: #888; margin-bottom: 20px; font-style: italic;">
-                *Reviews below are from actual participants. Your personal results will depend on your dedication and application of the skills.
+                *Reviews below are from actual participants. Your personal results will depend on your dedication and
+                application of the skills.
             </p>
 
-            <div class="testimonial-container">
-                <button class="slider-btn prev-btn" onclick="moveSlider(-1)">&#10094;</button>
-                <button class="slider-btn next-btn" onclick="moveSlider(1)">&#10095;</button>
+            <div class="feedback-slider">
+                <button class="nav-arrow arrow-left" onclick="moveSlider(-1)">&#10094;</button>
+                <button class="nav-arrow arrow-right" onclick="moveSlider(1)">&#10095;</button>
 
-                <div class="slider-track" id="track">
-                    <div class="slide">
+                <div class="carousel-rail" id="track">
+                    <div class="carousel-item">
                         <img src="testimonial1.webp" alt="Student1">
                     </div>
-                    <div class="slide">
+                    <div class="carousel-item">
                         <img src="testimonial2.webp" alt="Student2">
                     </div>
-                    <div class="slide">
+                    <div class="carousel-item">
                         <img src="testimonial3.webp" alt="Student3">
                     </div>
-                    <div class="slide">
+                    <div class="carousel-item">
                         <img src="testimonial4.webp" alt="Student4">
                     </div>
                 </div>
             </div>
 
             <p style="font-size: 14px; color: #666; text-align: center; margin-top: 15px;">
-                Results vary by individual. All examples illustrate what is possible with these tools when skills are applied correctly.
+                Results vary by individual. All examples illustrate what is possible with these tools when skills are
+                applied correctly.
             </p>
         </section>
 
         <section>
             <h2>Common Questions</h2>
 
-            <div class="faq-item">
-                <p class="faq-q">Do I need a powerful laptop or camera?</p>
-                <p>No. Your smartphone is sufficient. Whether you use an iPhone or Android, you can complete the course. A laptop works as well if you prefer it.</p>
+            <div class="qa-block">
+                <p class="qa-query">Do I need a powerful laptop or camera?</p>
+                <p>No. Your smartphone is sufficient. Whether you use an iPhone or Android, you can complete the course.
+                    A laptop works as well if you prefer it.</p>
             </div>
 
-            <div class="faq-item">
-                <p class="faq-q">I have zero video experience. Can I really do this?</p>
-                <p>Yes. The course is designed for beginners. If you are comfortable using basic apps on your phone, you can follow the step-by-step instructions.</p>
+            <div class="qa-block">
+                <p class="qa-query">I have zero video experience. Can I really do this?</p>
+                <p>Yes. The course is designed for beginners. If you are comfortable using basic apps on your phone, you
+                    can follow the step-by-step instructions.</p>
             </div>
 
-            <div class="faq-item">
-                <p class="faq-q">Is this a monthly subscription?</p>
-                <p>No. It is a one-time payment of ₦3,500. You will not be charged any recurring fees for the course content.</p>
+            <div class="qa-block">
+                <p class="qa-query">Is this a monthly subscription?</p>
+                <p>No. It is a one-time payment of ₦3,500. You will not be charged any recurring fees for the course
+                    content.</p>
             </div>
 
-            <div class="faq-item">
-                <p class="faq-q">When do I get access?</p>
-                <p>Immediately after your payment is confirmed, you will be redirected to the course area to begin your lessons.</p>
+            <div class="qa-block">
+                <p class="qa-query">When do I get access?</p>
+                <p>Immediately after your payment is confirmed, you will be redirected to the course area to begin your
+                    lessons.</p>
             </div>
         </section>
 
         <section style="margin-top: 40px;">
             <h2>Why Start Learning Today?</h2>
-            <p>Video content is becoming the standard for online communication. Learning these tools now gives you a valuable skill set you can use for your own projects or business.</p>
-            <p>Gain practical knowledge that stays with you. For a one-time fee of ₦3,500, you get access to the full training and bonuses.</p>
+            <p>Video content is becoming the standard for online communication. Learning these tools now gives you a
+                valuable skill set you can use for your own projects or business.</p>
+            <p>Gain practical knowledge that stays with you. For a one-time fee of ₦3,500, you get access to the full
+                training and bonuses.</p>
         </section>
 
         <div style="height: 60px;"></div>
 
         <footer>
             <p><strong>IMPORTANT DISCLAIMERS</strong></p>
-            <p style="margin-bottom: 10px;"><strong>Educational Purpose:</strong> This training provides workflows and technical skills for AI video creation. Results vary by individual and depend on factors such as niche, consistency, and effort. We do not guarantee specific viral results or earnings; all examples are illustrative of what is possible with the tools.</p>
+            <p style="margin-bottom: 10px;"><strong>Educational Purpose:</strong> This training provides workflows and
+                technical skills for AI video creation. Results vary by individual and depend on factors such as niche,
+                consistency, and effort. We do not guarantee specific viral results or earnings; all examples are
+                illustrative of what is possible with the tools.</p>
 
-            <p><strong>Platform Disclaimer:</strong> This site is not a part of the YouTube, Google, or Facebook website; Google Inc or Meta Inc. Additionally, This site is NOT endorsed by YouTube, Google, or Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. YOUTUBE is a trademark of GOOGLE Inc.</p>
+            <p><strong>Platform Disclaimer:</strong> This site is not a part of the YouTube, Google, or Facebook
+                website; Google Inc or Meta Inc. Additionally, This site is NOT endorsed by YouTube, Google, or Facebook
+                in any way. FACEBOOK is a trademark of FACEBOOK, Inc. YOUTUBE is a trademark of GOOGLE Inc.</p>
 
             <p style="margin-top: 20px;">
-                <a href='/privacy-policy'>Privacy Policy</a> | <a href='/tos'>Terms of Service</a> | <a href='/refund-policy'>Refund Policy</a> | <a href='/contact'>Contact Us</a>
+                <a href='/privacy-policy'>Privacy Policy</a> | <a href='/tos'>Terms of Service</a> | <a
+                    href='/refund-policy'>Refund Policy</a> | <a href='/contact'>Contact Us</a>
             </p>
             <p style="margin-top: 15px;">&copy; 2025 AI Video Tech.</p>
         </footer>
     </div>
 
-    <div class="sticky-footer">
-        <button class="cta-btn trigger-checkout" style="margin: 0; padding: 15px; font-size: 18px;">Get Instant Access
+    <div class="fixed-bottom-bar">
+        <button class="action-trigger trigger-checkout" style="margin: 0; padding: 15px; font-size: 18px;">Get Instant
+            Access
             Now</button>
     </div>
 
-    <div class="video-modal" id="videoModal">
-        <div class="video-container">
-            <button class="video-close" onclick="closeVideo()">&times;</button>
+    <div class="media-overlay" id="videoModal">
+        <div class="player-wrapper">
+            <button class="dismiss-overlay" onclick="closeVideo()">&times;</button>
             <video id="mainPlayer" controls playsinline>
                 <source src="" type="video/mp4">
             </video>
-            <button class="cta-btn" style="margin-top: 15px; font-size: 16px;" onclick="closeVideo(); openCheckout();">
+            <button class="action-trigger" style="margin-top: 15px; font-size: 16px;"
+                onclick="closeVideo(); openCheckout();">
                 Yes! Teach Me How To Make This &raquo;
             </button>
         </div>
     </div>
 
-    <div class="checkout-modal" id="checkoutModal">
-        <div class="checkout-content" id="checkoutContent">
-            <div class="checkout-header">
+    <div class="purchase-overlay" id="checkoutModal">
+        <div class="purchase-panel" id="checkoutContent">
+            <div class="panel-top">
                 <span style="font-weight: bold; font-size: 18px;">🔒 Secure Checkout</span>
                 <button onclick="closeCheckout()"
                     style="background:none; border:none; font-size: 24px;">&times;</button>
             </div>
 
-            <div class="checkout-body">
+            <div class="panel-main">
 
-                <div class="summary-box">
+                <div class="recap-block">
                     <div style="display:flex; justify-content:space-between; margin-bottom:5px; font-weight: 500;">
                         <span>AI Video Tech Course</span>
                         <span>₦3,500</span>
@@ -846,7 +883,7 @@
                         <span>All Included</span>
                     </div>
 
-                    <div class="total-row">
+                    <div class="final-sum">
                         <span>Total Due:</span>
                         <span style="color: var(--primary); font-weight: 900;">₦3,500</span>
                     </div>
@@ -857,16 +894,16 @@
 
                 <form id="checkoutForm">
                     <label style="font-weight:600; font-size:14px;">Full Name</label>
-                    <input type="text" class="form-input" id="userName" placeholder="e.g. Musa Ibrahim" required>
+                    <input type="text" class="data-field" id="userName" placeholder="e.g. Musa Ibrahim" required>
 
                     <label style="font-weight:600; font-size:14px;">Your Email Address</label>
-                    <input type="email" class="form-input" id="userEmail" placeholder="e.g. musa@gmail.com" required>
+                    <input type="email" class="data-field" id="userEmail" placeholder="e.g. musa@gmail.com" required>
 
                     <p style="font-size: 12px; color: var(--primary-dark); margin-top: -10px; margin-bottom: 20px;">
                         *Your course access will be sent to this email.
                     </p>
 
-                    <button type="submit" class="cta-btn cta-pulse" style="font-size: 18px; padding: 18px;">
+                    <button type="submit" class="action-trigger heartbeat-anim" style="font-size: 18px; padding: 18px;">
                         Enroll Now
                     </button>
                 </form>
@@ -934,7 +971,7 @@
         function moveSlider(direction) {
             const track = document.getElementById('track');
             // Get width of first slide
-            const slideWidth = track.querySelector('.slide').offsetWidth;
+            const slideWidth = track.querySelector('.carousel-item').offsetWidth;
             const gap = 15; // match css gap
 
             track.scrollBy({
@@ -945,7 +982,7 @@
 
         // --- PAYMENT LOGIC ---
         let publicKey = null;
-        const BACKEND_URL = 'https://Tech24-production.up.railway.app';
+        const BACKEND_URL = 'https://videotech-production.up.railway.app';
 
         // Fetch Public Key on Load
         fetch(`${BACKEND_URL}/api/config`)

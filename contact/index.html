@@ -6,21 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - The AI Video Craft</title>
     <meta name="robots" content="noindex, nofollow">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17789373034"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'AW-17789373034');
-    </script>
-    <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.io/js/pa-Q6EebBLiUEQUqpENtrzhN.js"></script>
-    <script>
-        window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} };
-        plausible.init()
-    </script>
 
     <style>
         /* --- RESET & BASIC STYLES --- */
@@ -52,7 +38,7 @@
         }
 
         /* --- LAYOUT UTILITIES --- */
-        .main-wrapper {
+        .content-holder {
             max-width: 700px;
             margin: 0 auto;
             padding: 20px;
@@ -95,7 +81,7 @@
         }
 
         /* --- SPECIFIC CONTACT STYLES --- */
-        .contact-info-box {
+        .direct-support-pane {
             background-color: #fff8e1;
             /* Matching info-card style roughly or keeping unique? keeping unique but using variables if possible, or just similar style */
             border-left: 5px solid #ffc107;
@@ -105,7 +91,7 @@
             text-align: center;
         }
 
-        .contact-email {
+        .support-addr {
             font-size: 20px;
             font-weight: bold;
             color: var(--primary);
@@ -113,7 +99,7 @@
         }
 
         /* Form Styles */
-        .form-group {
+        .input-wrap {
             margin-bottom: 20px;
         }
 
@@ -141,7 +127,7 @@
         }
 
         /* BUTTONS */
-        .submit-btn {
+        .send-trigger {
             background-color: var(--accent);
             color: white;
             padding: 20px 25px;
@@ -159,19 +145,19 @@
             margin-top: 20px;
         }
 
-        .submit-btn:active {
+        .send-trigger:active {
             transform: translateY(4px);
             box-shadow: none;
         }
 
-        .submit-btn:disabled {
+        .send-trigger:disabled {
             background-color: #ccc;
             box-shadow: none;
             cursor: not-allowed;
             transform: none;
         }
 
-        .back-link {
+        .return-anchor {
             display: block;
             margin-top: 30px;
             color: #666;
@@ -181,11 +167,11 @@
             font-weight: bold;
         }
 
-        .back-link:hover {
+        .return-anchor:hover {
             color: var(--primary);
         }
 
-        .footer {
+        .page-end {
             font-size: 12px;
             text-align: center;
             color: #666;
@@ -198,34 +184,34 @@
 
 <body>
 
-    <div class="main-wrapper">
+    <div class="content-holder">
         <h1>Contact Us</h1>
         <p>Have a question about the course? Need support with your order? We're here to help.</p>
 
         <!-- Direct Email Box -->
-        <div class="contact-info-box">
+        <div class="direct-support-pane">
             <p style="margin: 0 0 10px 0;">You can email us directly at:</p>
-            <a href="mailto:nathanfifa19@gmail.com" class="contact-email">nathanfifa19@gmail.com</a>
+            <a href="mailto:nathanfifa19@gmail.com" class="support-addr">nathanfifa19@gmail.com</a>
         </div>
 
         <!-- Contact Form -->
         <form id="contactForm">
-            <div class="form-group">
+            <div class="input-wrap">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
             </div>
 
-            <div class="form-group">
+            <div class="input-wrap">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
 
-            <div class="form-group">
+            <div class="input-wrap">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+            <button type="submit" class="send-trigger" id="submitBtn">Send Message</button>
         </form>
 
         <script>
@@ -242,7 +228,7 @@
                 const message = document.getElementById('message').value;
 
                 // Use the production Railway URL found in index.html
-                const apiUrl = 'https://videocraft-production.up.railway.app/api/contact';
+                const apiUrl = 'https://videotech-production.up.railway.app/api/contact';
 
                 try {
                     const response = await fetch(apiUrl, {
@@ -271,9 +257,9 @@
             });
         </script>
 
-        <a href="index.html" class="back-link">&laquo; Back to Home Page</a>
+        <a href="../index.html" class="return-anchor">&laquo; Back to Home Page</a>
 
-        <div class="footer">
+        <div class="page-end">
             &copy; 2024 The AI Video Craft. All rights reserved.
         </div>
     </div>
