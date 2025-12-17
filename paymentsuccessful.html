@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - AI Course Access</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17789373034"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17789373034');
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-Q6EebBLiUEQUqpENtrzhN.js"></script>
+    <script>
+        window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} };
+        plausible.init()
+    </script>
+
+    <style>
+        /* Custom Animation for the Success Checkmark */
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        /* Smooth fade in for the card */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen flex items-center justify-center p-4 font-sans text-slate-800">
+
+    <!-- Main Card -->
+    <div class="card-fade-in bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden relative">
+
+        <!-- Decorative Top Bar -->
+        <div class="h-2 bg-gradient-to-r from-green-400 to-emerald-600 w-full"></div>
+
+        <div class="p-8 text-center">
+
+            <!-- Success Icon -->
+            <div class="mb-6 flex justify-center">
+                <div
+                    class="animate-scale-in w-20 h-20 bg-green-100 rounded-full flex items-center justify-center shadow-inner">
+                    <i class="fa-solid fa-check text-4xl text-green-500"></i>
+                </div>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">Payment Successful!</h1>
+            <p class="text-slate-500 mb-8 font-medium">Welcome to the AI Mastery Course.</p>
+
+            <!-- Instructions Box -->
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8 text-left">
+                <h3 class="font-bold text-blue-800 text-sm uppercase tracking-wide mb-2 flex items-center">
+                    <i class="fa-solid fa-circle-info mr-2"></i> Next Steps
+                </h3>
+                <ol class="list-decimal list-inside space-y-2 text-sm text-slate-700">
+                    <li>Your access guide (<strong>aicourseaccess.pdf</strong>) is downloading automatically.</li>
+                    <li>Open the PDF file.</li>
+                    <li>Click the <strong>private invitation link</strong> inside the PDF to join our Telegram channel.
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Download Button (Fallback) -->
+            <div class="space-y-4">
+                <p class="text-xs text-slate-400">If the download didn't start automatically:</p>
+                <a href="aicourseaccess.pdf" download="aicourseaccess.pdf"
+                    class="group block w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                    <span class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-file-arrow-down group-hover:animate-bounce"></i>
+                        Download Access PDF
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-slate-50 p-4 text-center border-t border-slate-100">
+            <p class="text-xs text-slate-400">Need help? Contact nathanfifa19@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Script to Auto-Download -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait 1.5 seconds to let the user see the success message first, then trigger download
+            setTimeout(() => {
+                const link = document.createElement('a');
+                link.href = 'aicourseaccess.pdf';
+                link.download = 'aicourseaccess.pdf';
+                link.style.display = 'none'; // Hide the element
+                document.body.appendChild(link);
+
+                // Trigger click
+                link.click();
+
+                // Cleanup
+                document.body.removeChild(link);
+            }, 1500);
+        });
+    </script>
+
+</body>
+
+</html>

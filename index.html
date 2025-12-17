@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Tech Course - Smartphone Video Creation Guide</title>
+    
+    <meta name="description"
+        content="A practical guide to creating professional AI videos using your smartphone. Learn the workflows for business, social media, and storytelling content.">
+
+    <style>
+        /* --- RESET & BASIC STYLES --- */
+        :root {
+            --primary: #008751;
+            /* Nigerian Green */
+            --primary-dark: #00633b;
+            --accent: #d32f2f;
+            /* Urgency Red */
+            --text: #2d3436;
+            --bg: #fdfdfd;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+            --overlay: rgba(0, 0, 0, 0.90);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            font-size: 18px;
+        }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--white);
+            padding-bottom: 80px;
+            /* Space for sticky footer */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1.3;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-size: 26px;
+            text-align: center;
+            color: #000;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: var(--text);
+            margin-top: 30px;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: var(--text);
+            margin-top: 20px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 5px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        ul li span {
+            margin-right: 10px;
+        }
+
+        /* --- SPECIAL BOXES --- */
+        .highlight-box {
+            background-color: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .dark-box {
+            background-color: #2d3436;
+            color: white;
+            padding: 25px;
+            margin: 30px -20px;
+            /* Full width bleed on mobile */
+            border-radius: 0;
+        }
+
+        .dark-box h2 {
+            border-bottom-color: white;
+            color: white;
+        }
+
+        .dark-box p,
+        .dark-box li {
+            color: #ddd;
+        }
+
+        .bonus-box {
+            background-color: #e8f5e9;
+            border: 2px dashed var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .price-box {
+            text-align: center;
+            background: var(--light-gray);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .new-price {
+            color: var(--primary);
+            font-size: 48px;
+            font-weight: 900;
+            display: block;
+            margin: 10px 0;
+            letter-spacing: -1px;
+        }
+
+        /* --- BUTTONS --- */
+        .cta-btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 20px 25px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 0px #b71c1c;
+            /* Solid shadow for clicky feel */
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s;
+            margin: 15px 0;
+            line-height: 1.2;
+        }
+
+        .cta-btn:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+
+        .cta-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* --- TESTIMONIAL SLIDER --- */
+        .testimonial-container {
+            position: relative;
+            background: var(--light-gray);
+            padding: 20px 0;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .slider-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 15px;
+            padding: 0 20px;
+            /* Hide scrollbar */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scroll on iOS */
+        }
+
+        .slider-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            flex: 0 0 85%;
+            /* Shows a peek of the next slide */
+            scroll-snap-align: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+        }
+
+        /* Navigation Arrows */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 135, 81, 0.9);
+            /* Primary color */
+            color: white;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+
+        /* Desktop Adjustment */
+        @media (min-width: 600px) {
+            .slide {
+                flex: 0 0 60%;
+            }
+
+            /* Smaller cards on desktop */
+        }
+
+
+        /* --- FAQ --- */
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .faq-q {
+            font-weight: bold;
+            color: var(--primary-dark);
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        /* --- VIDEO GRID --- */
+        .video-section {
+            margin: 30px 0;
+        }
+
+        .video-section-header {
+            text-align: center;
+            background: #2d3436;
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background: #eee;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            /* CHANGED BACK TO 16/9 FOR SHORTER HEIGHT */
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+        }
+
+        .play-icon {
+            z-index: 2;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .video-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            text-align: center;
+            z-index: 3;
+            font-weight: 600;
+        }
+
+        /* --- CHECKLIST GRID --- */
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .checklist-item {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            font-size: 12px;
+            text-align: center;
+            color: #666;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        footer a {
+            color: #666;
+        }
+
+        /* --- STICKY FOOTER --- */
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 99;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .sticky-footer {
+                display: block;
+            }
+
+            .dark-box {
+                margin: 30px -20px;
+                padding: 25px 20px;
+            }
+        }
+
+        /* --- MODALS --- */
+        .video-modal,
+        .checkout-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay);
+            z-index: 2000;
+            display: none;
+        }
+
+        .video-modal {
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Video Modal Specifics */
+        .video-container {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Checkout Modal Specifics */
+        .checkout-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkout-header {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafafa;
+        }
+
+        .checkout-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        /* Form Styles */
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .summary-box {
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 18px;
+            border-top: 1px dashed #aaa;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header style="text-align: center; padding-bottom: 10px;">
+            <p style="font-size: 13px; color: #666; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
+                Attention: Content Creators & Business Owners</p>
+            <h1>You’ve probably seen these AI videos online and thought: "I wish I could create content like that."</h1>
+        </header>
+
+        <section>
+            <p>You might be looking to:</p>
+            <ul>
+                <li>✅ Explain your products or services clearly through video</li>
+                <li>✅ Post engaging content on your social media pages</li>
+                <li>✅ Share ideas, lessons, or stories effectively</li>
+                <li>✅ Use modern tools to save time and effort</li>
+            </ul>
+            <p>The challenge is that you want to get started, but <strong>the whole AI video process feels confusing to learn on your own.</strong></p>
+            <p>That’s exactly why the <strong>AI Video Tech Course</strong> was created to show you the process in a clear, simple, and practical way.</p>
+        </section>
+
+        <section class="video-section">
+            <div class="video-section-header">
+                <h3 style="color: white; margin: 0; font-size: 20px;">See What You Can Achieve</h3>
+                <p style="color: #ccc; font-size: 15px; margin: 10px 0 0; line-height: 1.4;">
+                    Take a look at the quality of work you can produce.<br>
+                    <span style="font-size: 13px; opacity: 0.9;"></span>
+                </p>
+            </div>
+            <div class="video-grid">
+                <div class="video-card" onclick="playVideo('video1.mp4', 'Business Ad')">
+                    <div
+                        style="background: linear-gradient(45deg, #eee, #ddd); position: absolute; top:0; left:0; width:100%; height:100%;">
+                    </div>
+                    <div class="play-icon">▶</div>
+                    <div class="video-label">Video 1</div>
+                </div>
+                <div class="video-card" onclick="playVideo('video2.mp4', 'Digital Avatar')">
+                    <div
+                        style="background: linear-gradient(45deg, #ddd, #ccc); position: absolute; top:0; left:0; width:100%; height:100%;">
+                    </div>
+                    <div class="play-icon">▶</div>
+                    <div class="video-label">Video 2</div>
+                </div>
+                <div class="video-card" onclick="playVideo('video3.mp4', 'Faceless Content')">
+                    <div
+                        style="background: linear-gradient(45deg, #ccc, #bbb); position: absolute; top:0; left:0; width:100%; height:100%;">
+                    </div>
+                    <div class="play-icon">▶</div>
+                    <div class="video-label">Video 3</div>
+                </div>
+                <div class="video-card" onclick="playVideo('video4.mp4', 'Storytelling')">
+                    <div
+                        style="background: linear-gradient(45deg, #bbb, #aaa); position: absolute; top:0; left:0; width:100%; height:100%;">
+                    </div>
+                    <div class="play-icon">▶</div>
+                    <div class="video-label">Video 4</div>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 13px; color: #666; margin-top: 10px;">*These are samples. Learn how to apply these skills to bring your creative video concepts to life.</p>
+        </section>
+
+        <button class="cta-btn cta-pulse trigger-checkout">Get Instant Access — Only N3,500</button>
+
+
+        <section>
+            <h2>What You Will Learn In This Course</h2>
+            <p>This is a practical training program. We focus on the specific workflows needed to produce high-quality AI videos step-by-step.
+            </p>
+
+            <div class="highlight-box">
+                <h4>🎬 Business & Marketing Clips</h4>
+                <p>Learn to produce product demos, service explainers, and engaging social media clips that help communicate your message clearly to potential customers.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>🤖 Create Your Own Digital Avatar</h4>
+                <p>Create a digital twin of yourself. Build an AI-powered version of your likeness so you can scale video creation and show up in countless videos without repeatedly recording the same content.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>🎥 Engaging Social Media Content</h4>
+                <p>Discover how to format and create videos specifically for platforms like Instagram, TikTok, and Facebook to capture attention as viewers scroll.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>🎭 Visual Storytelling</h4>
+                <p>Turn your written ideas into visual stories. We guide you through the process of using AI characters and scenes to match your narrative.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>🎯 Character Consistency</h4>
+                <p><strong>A Vital Skill.</strong> We teach you techniques to maintain the same character look across different scenes, which is essential for amazing storytelling.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>🗣️ Voice & Lip Sync Techniques</h4>
+                <p>Ensure your characters speak naturally. You will learn how to sync audio effectively so the final video looks polished and quality</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills You Can Apply Immediately</h2>
+            <div class="checklist-grid">
+                <div class="checklist-item">✅ E-commerce product videos</div>
+                <div class="checklist-item">✅ Explainer videos for services</div>
+                <div class="checklist-item">✅ Educational tutorials</div>
+                <div class="checklist-item">✅ Customer testimonial styles (UGC)</div>
+                <div class="checklist-item">✅ Social media reels/shorts</div>
+                <div class="checklist-item">✅ Faceless channel content</div>
+                <div class="checklist-item">✅ Sales presentations</div>
+            </div>
+            <p>Once you master these workflows, you can adapt them to create various types of content depending on your goals.</p>
+        </section>
+
+        <section style="text-align: center; padding: 20px; background: #f0f4c3; border-radius: 8px; margin: 30px 0;">
+            <h3>🚫 No Specialized Studio Gear Required</h3>
+            <p>One of the biggest advantages of this method is accessibility. You can perform all these tasks using standard devices.</p>
+            <p style="font-weight: bold; font-size: 19px;">
+                iPhone? Works perfectly.<br>
+                Android? You’re good to go.<br>
+                Laptop? That works too!
+            </p>
+            <p>You do not need to invest in expensive cameras or lighting setups to start learning. Your smartphone and the AI tools we teach are sufficient.</p>
+        </section>
+
+        <section>
+            <h2>Who Is This Course For?</h2>
+            <ul>
+                <li><span>💼</span> <strong>Business Owners</strong> looking for cost-effective ways to create marketing materials.</li>
+                <li><span>📱</span> <strong>Content Creators</strong> who want to produce more content efficiently using new tools.</li>
+                <li><span>🎓</span> <strong>Educators</strong> who need to create video lessons or instructional materials.</li>
+                <li><span>📢</span> <strong>Marketers</strong> seeking fresh, engaging formats for ad campaigns.</li>
+                <li><span>🛍️</span> <strong>E-commerce</strong> who want to showcase products without arranging a physical shoot.</li>
+            </ul>
+        </section>
+
+        <section class="dark-box">
+            <h2 style="margin-top: 0;">Why Choose Thish2>
+
+            <div style="margin-bottom: 20px;">
+                <h4>1. Practical Application</h4>
+                <p>We focus on "how-to" steps. You follow along and create. The goal is for you to have a finished video by the end of the lessons.</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4>2. Made For Everyone</h4>
+                <p>I understand our unique challenges, including high data costs and slower internet speeds, and this course is designed with those realities in mind.</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4>3. Beginner Friendly</h4>
+                <p>No prior video editing experience is required. The course is structured to guide you from the basics to more advanced techniques.</p>
+            </div>
+
+            <div>
+                <h4>4. One-Time Purchase</h4>
+                <p>Pay once for the education. There are no recurring subscription fees to access the course materials.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="bonus-box">
+                <h2 style="margin-top: 0; color: var(--accent); border: none;">🎁 Course Bonuses</h2>
+                <p><strong>(Included When You Join)</strong></p>
+
+                <p><strong>BONUS #1: The FB & IG Video Ad Guide</strong><br>
+                    Creating the video is one thing. I’ll show you how to set up campaigns designed to reach your
+                    audience.</p>
+
+                <p><strong>BONUS #2: Global Content Strategy</strong><br>
+                    Learn the specific settings and content styles designed to help target audiences in the UK and US.
+                </p>
+
+                <p><strong>BONUS #3: Faceless Content Creation Guide</strong><br>
+                    Learn to produce engaging videos without needing to be on camera... perfect if you prefer privacy.
+                </p>
+
+                <p><strong>BONUS #4: Ultimate AI Resource Directory</strong><br>
+                    My personal collection of AI tools and Apps to save you time.</p>
+            </div>
+        </section>
+
+        <section class="price-box">
+            <p><strong>Course + All 4 Bonuses:</strong></p>
+            <span class="new-price">₦3,500</span>
+            <p style="font-size: 14px; color: var(--primary); font-weight: bold;">(Special Launch Offer)</p>
+            <p><i>One-time payment. Lifetime access.</i></p>
+
+            <button class="cta-btn cta-pulse trigger-checkout">Start Learning Now</button>
+
+            <p style="font-size: 14px; margin-top: 10px; color: #666;">🔒 Secure Payment via Paystack</p>
+        </section>
+
+        <section>
+            <h2>Here’s What Real Students Are Saying</h2>
+            <p style="text-align: center; color: #555; margin-bottom: 5px;">
+                See what early students are saying about the training.
+            </p>
+            <p style="text-align: center; font-size: 12px; color: #888; margin-bottom: 20px; font-style: italic;">
+                *Reviews below are from actual participants. Your personal results will depend on your dedication and application of the skills.
+            </p>
+
+            <div class="testimonial-container">
+                <button class="slider-btn prev-btn" onclick="moveSlider(-1)">&#10094;</button>
+                <button class="slider-btn next-btn" onclick="moveSlider(1)">&#10095;</button>
+
+                <div class="slider-track" id="track">
+                    <div class="slide">
+                        <img src="testimonial1.webp" alt="Student1">
+                    </div>
+                    <div class="slide">
+                        <img src="testimonial2.webp" alt="Student2">
+                    </div>
+                    <div class="slide">
+                        <img src="testimonial3.webp" alt="Student3">
+                    </div>
+                    <div class="slide">
+                        <img src="testimonial4.webp" alt="Student4">
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-size: 14px; color: #666; text-align: center; margin-top: 15px;">
+                Results vary by individual. All examples illustrate what is possible with these tools when skills are applied correctly.
+            </p>
+        </section>
+
+        <section>
+            <h2>Common Questions</h2>
+
+            <div class="faq-item">
+                <p class="faq-q">Do I need a powerful laptop or camera?</p>
+                <p>No. Your smartphone is sufficient. Whether you use an iPhone or Android, you can complete the course. A laptop works as well if you prefer it.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">I have zero video experience. Can I really do this?</p>
+                <p>Yes. The course is designed for beginners. If you are comfortable using basic apps on your phone, you can follow the step-by-step instructions.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">Is this a monthly subscription?</p>
+                <p>No. It is a one-time payment of ₦3,500. You will not be charged any recurring fees for the course content.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-q">When do I get access?</p>
+                <p>Immediately after your payment is confirmed, you will be redirected to the course area to begin your lessons.</p>
+            </div>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <h2>Why Start Learning Today?</h2>
+            <p>Video content is becoming the standard for online communication. Learning these tools now gives you a valuable skill set you can use for your own projects or business.</p>
+            <p>Gain practical knowledge that stays with you. For a one-time fee of ₦3,500, you get access to the full training and bonuses.</p>
+        </section>
+
+        <div style="height: 60px;"></div>
+
+        <footer>
+            <p><strong>IMPORTANT DISCLAIMERS</strong></p>
+            <p style="margin-bottom: 10px;"><strong>Educational Purpose:</strong> This training provides workflows and technical skills for AI video creation. Results vary by individual and depend on factors such as niche, consistency, and effort. We do not guarantee specific viral results or earnings; all examples are illustrative of what is possible with the tools.</p>
+
+            <p><strong>Platform Disclaimer:</strong> This site is not a part of the YouTube, Google, or Facebook website; Google Inc or Meta Inc. Additionally, This site is NOT endorsed by YouTube, Google, or Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. YOUTUBE is a trademark of GOOGLE Inc.</p>
+
+            <p style="margin-top: 20px;">
+                <a href='/privacy-policy'>Privacy Policy</a> | <a href='/tos'>Terms of Service</a> | <a href='/refund-policy'>Refund Policy</a> | <a href='/contact'>Contact Us</a>
+            </p>
+            <p style="margin-top: 15px;">&copy; 2025 AI Video Tech.</p>
+        </footer>
+    </div>
+
+    <div class="sticky-footer">
+        <button class="cta-btn trigger-checkout" style="margin: 0; padding: 15px; font-size: 18px;">Get Instant Access
+            Now</button>
+    </div>
+
+    <div class="video-modal" id="videoModal">
+        <div class="video-container">
+            <button class="video-close" onclick="closeVideo()">&times;</button>
+            <video id="mainPlayer" controls playsinline>
+                <source src="" type="video/mp4">
+            </video>
+            <button class="cta-btn" style="margin-top: 15px; font-size: 16px;" onclick="closeVideo(); openCheckout();">
+                Yes! Teach Me How To Make This &raquo;
+            </button>
+        </div>
+    </div>
+
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content" id="checkoutContent">
+            <div class="checkout-header">
+                <span style="font-weight: bold; font-size: 18px;">🔒 Secure Checkout</span>
+                <button onclick="closeCheckout()"
+                    style="background:none; border:none; font-size: 24px;">&times;</button>
+            </div>
+
+            <div class="checkout-body">
+
+                <div class="summary-box">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:5px; font-weight: 500;">
+                        <span>AI Video Tech Course</span>
+                        <span>₦3,500</span>
+                    </div>
+
+                    <div
+                        style="display:flex; justify-content:space-between; background: var(--primary); color: var(--white); font-size:13px; padding: 5px 8px; border-radius: 4px; margin-bottom: 10px;">
+                        <span>✅ Plus 4 Bonuses Included</span>
+                        <span>All Included</span>
+                    </div>
+
+                    <div class="total-row">
+                        <span>Total Due:</span>
+                        <span style="color: var(--primary); font-weight: 900;">₦3,500</span>
+                    </div>
+                </div>
+
+                <p style="font-size: 14px; color: #555; margin-bottom: 20px;">Enter your details below to get instant
+                    access.</p>
+
+                <form id="checkoutForm">
+                    <label style="font-weight:600; font-size:14px;">Full Name</label>
+                    <input type="text" class="form-input" id="userName" placeholder="e.g. Musa Ibrahim" required>
+
+                    <label style="font-weight:600; font-size:14px;">Your Email Address</label>
+                    <input type="email" class="form-input" id="userEmail" placeholder="e.g. musa@gmail.com" required>
+
+                    <p style="font-size: 12px; color: var(--primary-dark); margin-top: -10px; margin-bottom: 20px;">
+                        *Your course access will be sent to this email.
+                    </p>
+
+                    <button type="submit" class="cta-btn cta-pulse" style="font-size: 18px; padding: 18px;">
+                        Enroll Now
+                    </button>
+                </form>
+
+                <div
+                    style="text-align: center; font-size: 12px; color: #777; margin-top: 20px; padding-top: 10px; border-top: 1px solid #eee;">
+                    <span style="font-weight: bold;">🔒 Secured by Paystack.</span>
+                    <br>No hidden charges. Lifetime Access.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        // --- MODAL LOGIC ---
+        const checkoutModal = document.getElementById('checkoutModal');
+        const checkoutContent = document.getElementById('checkoutContent');
+        const videoModal = document.getElementById('videoModal');
+        const player = document.getElementById('mainPlayer');
+
+        // OPEN CHECKOUT
+        function openCheckout() {
+            checkoutModal.style.display = 'block';
+            setTimeout(() => {
+                checkoutContent.style.transform = 'translateX(0)';
+            }, 10);
+        }
+
+        // CLOSE CHECKOUT
+        function closeCheckout() {
+            checkoutContent.style.transform = 'translateX(-100%)';
+            setTimeout(() => {
+                checkoutModal.style.display = 'none';
+            }, 300);
+        }
+
+        // VIDEO LOGIC
+        function playVideo(filename, title) {
+            player.src = filename;
+            videoModal.style.display = 'flex';
+            player.play();
+        }
+
+        function closeVideo() {
+            player.pause();
+            player.src = "";
+            videoModal.style.display = 'none';
+        }
+
+        // TRIGGERS
+        document.querySelectorAll('.trigger-checkout').forEach(btn => {
+            btn.addEventListener('click', openCheckout);
+        });
+
+        // CLICK OUTSIDE TO CLOSE
+        checkoutModal.addEventListener('click', (e) => {
+            if (e.target === checkoutModal) closeCheckout();
+        });
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) closeVideo();
+        });
+
+        // TESTIMONIAL SLIDER LOGIC
+        function moveSlider(direction) {
+            const track = document.getElementById('track');
+            // Get width of first slide
+            const slideWidth = track.querySelector('.slide').offsetWidth;
+            const gap = 15; // match css gap
+
+            track.scrollBy({
+                left: direction * (slideWidth + gap),
+                behavior: 'smooth'
+            });
+        }
+
+        // --- PAYMENT LOGIC ---
+        let publicKey = null;
+        const BACKEND_URL = 'https://Tech24-production.up.railway.app';
+
+        // Fetch Public Key on Load
+        fetch(`${BACKEND_URL}/api/config`)
+            .then(res => res.json())
+            .then(data => {
+                publicKey = data.key;
+                console.log('Payment system initialized.');
+            })
+            .catch(err => console.error('Error fetching config:', err));
+
+        // FORM SUBMIT
+        document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (!publicKey) {
+                alert('Payment system is loading. Please try again in 3 seconds.');
+                return;
+            }
+
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            const userName = document.getElementById('userName').value;
+            const userEmail = document.getElementById('userEmail').value;
+            const amount = 3500; // Fixed amount
+
+            btn.innerText = "Processing...";
+            btn.disabled = true;
+
+            const handler = PaystackPop.setup({
+                key: publicKey,
+                email: userEmail,
+                amount: amount * 100, // Paystack expects amount in kobo
+                currency: 'NGN',
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Full Name",
+                            variable_name: "full_name",
+                            value: userName
+                        }
+                    ]
+                },
+                callback: function (response) {
+                    // Payment Complete! Verify on backend
+                    btn.innerText = "Verifying...";
+
+                    fetch(`${BACKEND_URL}/api/verify`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            reference: response.reference,
+                            email: userEmail,
+                            name: userName,
+                            amount: amount
+                        })
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.status) {
+                                window.location.href = "paymentsuccessful.html";
+                            } else {
+                                alert('Transaction verification failed. Please contact support.');
+                                btn.innerText = originalText;
+                                btn.disabled = false;
+                            }
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            alert('Network error during verification. Reference: ' + response.reference);
+                            btn.innerText = originalText;
+                            btn.disabled = false;
+                        });
+                },
+                onClose: function () {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    // alert('Transaction cancelled.');
+                }
+            });
+
+            handler.openIframe();
+        });
+    </script>
+</body>
+
+</html>
